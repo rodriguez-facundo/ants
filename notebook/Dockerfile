@@ -88,5 +88,8 @@ COPY --chown=1000:100 pet.ipynb pet.ipynb
 COPY --chown=1000:100 Plotting.ipynb Plotting.ipynb
 COPY --chown=1000:100 Segmentation.ipynb Segmentation.ipynb
 COPY --chown=1000:100 Co-registration.ipynb Co-registration.ipynb
+COPY --chown=1000:100 pydicome.ipynb pydicome.ipynb
+
+RUN conda install pydicom
 
 CMD ["jupyter", "notebook", "--NotebookApp.token=''"]
